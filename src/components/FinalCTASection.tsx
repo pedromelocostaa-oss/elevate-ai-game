@@ -13,7 +13,7 @@ const FinalCTASection = () => {
           href="#checkout"
           className="inline-flex items-center gap-3 px-10 py-5 bg-white text-primary font-bold text-xl rounded-xl hover:bg-white/90 transition-all shadow-lg"
         >
-          Quero ser um CLT do Futuro
+          Quero minha Virada Profissional
         </a>
 
         <p className="mt-5 text-sm text-white/50">

@@ -15,7 +15,7 @@ const DiagnosisSection = () => {
             Seu plano personalizado de IA. Para a sua área. Para o seu dia a dia.
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Nenhum curso genérico faz isso. Enquanto outros entregam o mesmo conteúdo para todo mundo, o CLT do Futuro analisa a sua rotina e te diz exatamente onde e como aplicar IA no seu trabalho.
+            Nenhum curso genérico faz isso. Enquanto outros entregam o mesmo conteúdo para todo mundo, a Virada Profissional com IA analisa a sua rotina e te diz exatamente onde e como aplicar IA no seu trabalho.
           </p>
         </div>
 

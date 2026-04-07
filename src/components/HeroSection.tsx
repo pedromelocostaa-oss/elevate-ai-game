@@ -37,14 +37,14 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            CLT do Futuro é a plataforma que transforma profissionais comuns em profissionais indispensáveis — usando as ferramentas de IA que já existem, mas que quase ninguém sabe usar de verdade.
+            Virada Profissional com IA é a plataforma que transforma profissionais comuns em profissionais indispensáveis — usando as ferramentas de IA que já existem, mas que quase ninguém sabe usar de verdade.
           </p>
 
           <a
             href="#checkout"
             className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-bold text-lg rounded-xl hover:opacity-90 transition-all shadow-lg shadow-primary/20"
           >
-            Quero ser um CLT do Futuro — R$97
+            Quero minha Virada Profissional — R$97
           </a>
 
           <p className="mt-4 text-sm text-muted-foreground">

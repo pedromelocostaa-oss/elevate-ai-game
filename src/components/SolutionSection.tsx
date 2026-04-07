@@ -24,7 +24,7 @@ const SolutionSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
-            CLT do Futuro: o caminho mais direto para se tornar o profissional mais valioso da sua equipe.
+            Virada Profissional com IA: o caminho mais direto para se tornar o profissional mais valioso da sua equipe.
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Uma plataforma completa que te ensina a usar as ferramentas certas, do jeito certo — e ainda entrega um diagnóstico personalizado com IA para a sua realidade.
