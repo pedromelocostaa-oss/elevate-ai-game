@@ -1,6 +1,23 @@
-const tools = [
-  "ChatGPT", "Claude", "Claude Cowork", "Claude Code", "Gemini",
-  "Copilot", "Lovable", "Cursor", "n8n", "Perplexity", "NotebookLM"
+import chatgptLogo from "@/assets/logos/chatgpt.png";
+import claudeLogo from "@/assets/logos/claude.png";
+import geminiLogo from "@/assets/logos/gemini.png";
+import copilotLogo from "@/assets/logos/copilot.png";
+import lovableLogo from "@/assets/logos/lovable.png";
+import cursorLogo from "@/assets/logos/cursor.png";
+import n8nLogo from "@/assets/logos/n8n.png";
+import perplexityLogo from "@/assets/logos/perplexity.png";
+import notebooklmLogo from "@/assets/logos/notebooklm.png";
+
+const toolLogos = [
+  { name: "ChatGPT", logo: chatgptLogo },
+  { name: "Claude", logo: claudeLogo },
+  { name: "Gemini", logo: geminiLogo },
+  { name: "Copilot", logo: copilotLogo },
+  { name: "Lovable", logo: lovableLogo },
+  { name: "Cursor", logo: cursorLogo },
+  { name: "n8n", logo: n8nLogo },
+  { name: "Perplexity", logo: perplexityLogo },
+  { name: "NotebookLM", logo: notebooklmLogo },
 ];
 
 const HeroSection = () => {
@@ -34,12 +51,17 @@ const HeroSection = () => {
       </section>
 
       {/* Tools bar */}
-      <div className="py-6 px-4" style={{ backgroundColor: 'hsl(var(--section-alt))' }}>
+      <div className="py-8 px-4" style={{ backgroundColor: 'hsl(var(--section-alt))' }}>
         <div className="max-w-5xl mx-auto text-center">
-          <p className="text-sm font-medium text-muted-foreground mb-3">Ferramentas que você vai dominar:</p>
-          <p className="text-sm text-muted-foreground">
-            {tools.join(" · ")}
-          </p>
+          <p className="text-sm font-medium text-muted-foreground mb-6">Ferramentas que você vai dominar:</p>
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+            {toolLogos.map((t) => (
+              <div key={t.name} className="flex flex-col items-center gap-2">
+                <img src={t.logo} alt={t.name} loading="lazy" width={36} height={36} className="w-9 h-9 object-contain" />
+                <span className="text-xs text-muted-foreground font-medium">{t.name}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>
