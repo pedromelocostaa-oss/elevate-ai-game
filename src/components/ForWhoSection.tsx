@@ -1,33 +1,29 @@
-import { TrendingUp, HeadphonesIcon, Megaphone, Settings, Award, DollarSign } from "lucide-react";
+import { TrendingUp, HeadphonesIcon, Megaphone, Settings, Award, DollarSign, Scale, Building } from "lucide-react";
 
 const profiles = [
-  { icon: TrendingUp, title: "Para você que trabalha em vendas", description: "Use IA para prospectar, qualificar leads e fechar mais negócios." },
-  { icon: HeadphonesIcon, title: "Para você que trabalha em CS", description: "Automatize respostas, antecipe problemas e encante seus clientes." },
-  { icon: Megaphone, title: "Para você que trabalha em marketing", description: "Crie conteúdo, analise dados e otimize campanhas com IA." },
-  { icon: Settings, title: "Para você que trabalha em operações", description: "Elimine tarefas manuais e ganhe eficiência na sua rotina." },
-  { icon: Award, title: "Para você que quer ser promovido", description: "Destaque-se gerando mais valor com menos esforço." },
-  { icon: DollarSign, title: "Para você que quer ganhar mais", description: "Sem trocar de emprego — só mudando como você trabalha." },
+  { icon: TrendingUp, text: "Para você que trabalha em vendas e quer fechar mais em menos tempo" },
+  { icon: HeadphonesIcon, text: "Para você que trabalha em CS e quer antecipar problemas antes que virem churn" },
+  { icon: Megaphone, text: "Para você que trabalha em marketing e quer produzir mais com menos esforço" },
+  { icon: Settings, text: "Para você que trabalha em operações e quer eliminar tarefas repetitivas de uma vez" },
+  { icon: Award, text: "Para você que quer ser promovido e precisa se destacar da equipe" },
+  { icon: DollarSign, text: "Para você que quer ganhar mais sem precisar trocar de emprego" },
+  { icon: Scale, text: "Para você que trabalha no jurídico ou financeiro e quer ganhar horas de volta toda semana" },
+  { icon: Building, text: "Para gestores que querem que seu time inteiro produza mais com as mesmas horas" },
 ];
 
 const ForWhoSection = () => {
   return (
     <section className="section-padding">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <span className="text-primary font-medium text-sm uppercase tracking-wider">Para quem é</span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold mt-3">
-            O Nível IA é para <span className="text-gradient">você?</span>
-          </h2>
-        </div>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-center tracking-tight mb-12">
+          Esse produto foi feito para você.
+        </h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {profiles.map((p, i) => (
-            <div key={i} className="p-6 rounded-2xl bg-secondary border border-border hover:border-glow transition-all group">
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <p.icon className="w-5 h-5 text-primary" />
-              </div>
-              <h3 className="font-display font-semibold text-lg mb-2">{p.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{p.description}</p>
+            <div key={i} className="flex items-start gap-3 p-5 rounded-xl border border-border bg-card">
+              <p.icon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+              <p className="text-sm text-foreground leading-relaxed">{p.text}</p>
             </div>
           ))}
         </div>

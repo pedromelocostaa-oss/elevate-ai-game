@@ -1,50 +1,39 @@
-import { User, Briefcase, MessageSquare, Cpu, FileText } from "lucide-react";
+import { Target, MessageSquare, Bot } from "lucide-react";
 
 const steps = [
-  { icon: User, label: "Informe sua área" },
-  { icon: Briefcase, label: "Conte seu setor" },
-  { icon: MessageSquare, label: "Descreva sua rotina" },
-  { icon: Cpu, label: "IA analisa tudo" },
-  { icon: FileText, label: "Receba seu plano" },
+  { num: 1, icon: Target, label: "Você informa sua área de atuação e seu setor" },
+  { num: 2, icon: MessageSquare, label: "Descreve como é o seu dia a dia no trabalho — suas tarefas, ferramentas e desafios" },
+  { num: 3, icon: Bot, label: "A IA analisa tudo e entrega um diagnóstico com ações concretas para aplicar imediatamente" },
 ];
 
 const DiagnosisSection = () => {
   return (
-    <section className="section-padding relative overflow-hidden">
-      <div className="absolute inset-0 opacity-30" style={{ background: 'radial-gradient(ellipse at center, hsl(217 91% 60% / 0.1), transparent 70%)' }} />
-      
-      <div className="relative max-w-5xl mx-auto">
+    <section className="py-20 md:py-24 px-4 md:px-8 border-y border-primary/20" style={{ backgroundColor: 'hsl(var(--section-highlight))' }}>
+      <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-            ✨ Exclusivo do Nível IA
-          </span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-            Diagnóstico <span className="text-gradient">personalizado</span> por IA
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
+            Seu plano personalizado de IA. Para a sua área. Para o seu dia a dia.
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Nenhum curso genérico oferece isso. Você conta como é seu dia a dia — e a IA entrega um plano sob medida de como aplicar IA na sua rotina real.
+            Nenhum curso genérico faz isso. Enquanto outros entregam o mesmo conteúdo para todo mundo, o Nível IA analisa a sua rotina e te diz exatamente onde e como aplicar IA no seu trabalho.
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-2">
-          {steps.map((step, i) => (
-            <div key={i} className="flex items-center gap-2">
-              <div className="flex flex-col items-center gap-2">
-                <div className="w-16 h-16 rounded-2xl bg-secondary border border-glow flex items-center justify-center glow-box">
-                  <step.icon className="w-7 h-7 text-primary" />
-                </div>
-                <span className="text-sm text-foreground font-medium text-center max-w-[100px]">{step.label}</span>
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          {steps.map((s) => (
+            <div key={s.num} className="text-center">
+              <div className="w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                {s.num}
               </div>
-              {i < steps.length - 1 && (
-                <div className="hidden md:block w-8 h-px bg-primary/30 mt-[-20px]" />
-              )}
+              <s.icon className="w-6 h-6 text-primary mx-auto mb-3" />
+              <p className="text-foreground text-sm leading-relaxed">{s.label}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 p-8 rounded-2xl bg-secondary border border-glow gradient-border text-center glow-box">
-          <p className="text-lg text-foreground leading-relaxed">
-            <span className="font-semibold text-primary">O resultado?</span> Um plano de ação personalizado com as ferramentas, prompts e automações ideais para a <em>sua</em> realidade profissional.
+        <div className="p-6 md:p-8 rounded-xl border border-primary/20 bg-card text-center">
+          <p className="text-foreground leading-relaxed">
+            <span className="font-bold text-primary">O diagnóstico é feito para você</span> — não para uma persona fictícia. É como ter um consultor de IA olhando para a sua rotina específica.
           </p>
         </div>
       </div>

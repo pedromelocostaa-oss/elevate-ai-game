@@ -7,11 +7,11 @@ const GuaranteeSection = () => {
         <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
           <ShieldCheck className="w-8 h-8 text-primary" />
         </div>
-        <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-          Garantia de 7 dias
+        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
+          7 dias de garantia. Sem perguntas.
         </h2>
         <p className="text-muted-foreground text-lg leading-relaxed">
-          Se em 7 dias você sentir que o Nível IA não é para você, basta pedir e devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia. O risco é zero — todo ele é nosso.
+          Se você comprar, acessar o conteúdo e sentir que não valeu cada centavo, devolvemos 100% do seu dinheiro em até 7 dias. Sem burocracia, sem questionamento, sem enrolação.
         </p>
       </div>
     </section>
