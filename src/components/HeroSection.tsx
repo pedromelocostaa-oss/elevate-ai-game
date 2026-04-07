@@ -20,6 +20,9 @@ const toolLogos = [
   { name: "NotebookLM", logo: notebooklmLogo },
 ];
 
+// Duplicate for seamless loop
+const marqueeItems = [...toolLogos, ...toolLogos];
+
 const HeroSection = () => {
   return (
     <>
@@ -50,15 +53,19 @@ const HeroSection = () => {
         </div>
       </section>
 
-      {/* Tools bar */}
-      <div className="py-8 px-4" style={{ backgroundColor: 'hsl(var(--section-alt))' }}>
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="text-sm font-medium text-muted-foreground mb-6">Ferramentas que você vai dominar:</p>
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
-            {toolLogos.map((t) => (
-              <div key={t.name} className="flex flex-col items-center gap-2">
-                <img src={t.logo} alt={t.name} loading="lazy" width={36} height={36} className="w-9 h-9 object-contain" />
-                <span className="text-xs text-muted-foreground font-medium">{t.name}</span>
+      {/* Tools marquee */}
+      <div className="py-8 overflow-hidden" style={{ backgroundColor: 'hsl(var(--section-alt))' }}>
+        <p className="text-sm font-medium text-muted-foreground mb-6 text-center">Ferramentas que você vai dominar:</p>
+        <div className="relative">
+          {/* Fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 z-10" style={{ background: 'linear-gradient(to right, hsl(var(--section-alt)), transparent)' }} />
+          <div className="absolute right-0 top-0 bottom-0 w-16 z-10" style={{ background: 'linear-gradient(to left, hsl(var(--section-alt)), transparent)' }} />
+
+          <div className="flex animate-marquee w-max gap-10 md:gap-14">
+            {marqueeItems.map((t, i) => (
+              <div key={i} className="flex flex-col items-center gap-2 shrink-0">
+                <img src={t.logo} alt={t.name} width={36} height={36} className="w-9 h-9 object-contain" />
+                <span className="text-xs text-muted-foreground font-medium whitespace-nowrap">{t.name}</span>
               </div>
             ))}
           </div>
