@@ -1,12 +1,12 @@
 import chatgptLogo from "@/assets/logos/chatgpt.png";
 import claudeLogo from "@/assets/logos/claude.png";
-import geminiLogo from "@/assets/logos/gemini.png";
-import copilotLogo from "@/assets/logos/copilot.png";
+import geminiLogo from "@/assets/logos/gemini.svg";
+import copilotLogo from "@/assets/logos/copilot.svg";
 import lovableLogo from "@/assets/logos/lovable.png";
-import cursorLogo from "@/assets/logos/cursor.png";
-import n8nLogo from "@/assets/logos/n8n.png";
-import perplexityLogo from "@/assets/logos/perplexity.png";
-import notebooklmLogo from "@/assets/logos/notebooklm.png";
+import cursorLogo from "@/assets/logos/cursor.svg";
+import n8nLogo from "@/assets/logos/n8n.svg";
+import perplexityLogo from "@/assets/logos/perplexity.svg";
+import notebooklmLogo from "@/assets/logos/notebooklm.svg";
 
 const toolLogos = [
   { name: "ChatGPT", logo: chatgptLogo },
