@@ -55,7 +55,7 @@ const ProblemSection = () => {
                     <Check className="w-3.5 h-3.5 text-primary" />
                   </div>
                   <div>
-                    <span className="text-xs font-medium text-primary uppercase tracking-wider">CLT do Futuro</span>
+                    <span className="text-xs font-medium text-primary uppercase tracking-wider">Profissional com IA</span>
                     <p className="text-foreground mt-1 text-sm">{item.nivelIA}</p>
                   </div>
                 </div>

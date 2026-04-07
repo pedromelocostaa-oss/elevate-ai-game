@@ -16,7 +16,7 @@ const LearningSection = () => {
     <section className="section-padding">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-extrabold text-center tracking-tight mb-12">
-          Tudo que você vai dominar dentro do CLT do Futuro.
+          Tudo que você vai dominar dentro da Virada Profissional com IA.
         </h2>
 
         <div className="grid sm:grid-cols-2 gap-4">
