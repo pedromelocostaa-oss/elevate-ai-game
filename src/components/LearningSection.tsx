@@ -1,33 +1,32 @@
 import { Brain, Wrench, ListChecks, MessageCircle, BarChart3, Target, ClipboardList, Sparkles } from "lucide-react";
 
 const modules = [
-  { icon: Brain, title: "A nova vantagem competitiva", description: "Mentalidade AI-First para se destacar no mercado." },
-  { icon: Wrench, title: "As ferramentas que mudam o jogo", description: "Cursor, Claude, Lovable, n8n — quando e como usar cada uma." },
-  { icon: ListChecks, title: "Framework operacional de IA", description: "5 etapas práticas para integrar IA na sua rotina." },
-  { icon: MessageCircle, title: "Prompt Engineering avançado", description: "Crie prompts que geram resultados profissionais reais." },
-  { icon: BarChart3, title: "IA aplicada por área", description: "Vendas, CS, Marketing, Operações, Jurídico, Financeiro." },
-  { icon: Target, title: "Casos reais com resultados", description: "Exemplos mensuráveis de profissionais que aplicaram." },
-  { icon: ClipboardList, title: "Checklist diário de IA", description: "Rotina prática para usar IA todos os dias no trabalho." },
-  { icon: Sparkles, title: "Top 20 prompts por área", description: "Prompts prontos para copiar e usar imediatamente." },
+  { icon: Brain, title: "A mentalidade AI-First", desc: "Como as empresas mais eficientes do mundo já operam" },
+  { icon: Wrench, title: "As ferramentas que mudam o jogo", desc: "ChatGPT, Claude, Lovable, Cursor, n8n e mais" },
+  { icon: ListChecks, title: "Framework de 5 etapas", desc: "Para resolver qualquer problema com IA" },
+  { icon: MessageCircle, title: "Prompt Engineering avançado", desc: "As técnicas que separam os 10% melhores usuários" },
+  { icon: BarChart3, title: "IA aplicada por área", desc: "Vendas, CS, Marketing, Operações, Jurídico e Financeiro" },
+  { icon: Target, title: "Casos reais com resultados", desc: "Resultados mensuráveis de empresas que já aplicaram" },
+  { icon: ClipboardList, title: "Checklist diário de IA", desc: "Para criar o hábito e manter a consistência" },
+  { icon: Sparkles, title: "20 prompts prontos", desc: "Para usar hoje na sua área, sem precisar criar do zero" },
 ];
 
 const LearningSection = () => {
   return (
     <section className="section-padding">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <span className="text-primary font-medium text-sm uppercase tracking-wider">Conteúdo</span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold mt-3 mb-6">
-            O que você vai <span className="text-gradient">aprender</span>
-          </h2>
-        </div>
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-center tracking-tight mb-12">
+          Tudo que você vai dominar dentro do Nível IA.
+        </h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 gap-4">
           {modules.map((m, i) => (
-            <div key={i} className="p-6 rounded-2xl bg-secondary border border-border hover:border-glow transition-all group">
-              <m.icon className="w-8 h-8 text-primary mb-4" />
-              <h3 className="font-display font-semibold mb-2">{m.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{m.description}</p>
+            <div key={i} className="flex items-start gap-4 p-5 rounded-xl border border-border bg-card">
+              <m.icon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+              <div>
+                <h3 className="font-bold text-sm mb-1">{m.title}</h3>
+                <p className="text-muted-foreground text-sm">{m.desc}</p>
+              </div>
             </div>
           ))}
         </div>

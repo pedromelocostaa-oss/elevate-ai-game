@@ -1,25 +1,22 @@
 const FinalCTASection = () => {
   return (
-    <section className="section-padding relative overflow-hidden">
-      <div className="absolute inset-0 opacity-20" style={{ background: 'radial-gradient(ellipse at bottom, hsl(217 91% 60% / 0.15), transparent 70%)' }} />
-      
-      <div className="relative max-w-3xl mx-auto text-center">
-        <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-          Suba de nível.{" "}
-          <span className="text-gradient">Agora.</span>
+    <section className="px-4 py-20 md:px-8 md:py-28" style={{ backgroundColor: 'hsl(var(--cta-bg))' }}>
+      <div className="max-w-3xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white tracking-tight">
+          Comece hoje. Seu próximo nível começa aqui.
         </h2>
-        <p className="text-muted-foreground text-lg mb-10 max-w-xl mx-auto">
-          Por apenas R$97 você acessa tudo: conteúdo completo, ferramentas, prompts prontos e o diagnóstico personalizado por IA.
+        <p className="text-white/70 text-lg mb-10">
+          Acesso imediato. Uma vez. R$97.
         </p>
 
         <a
           href="#checkout"
-          className="inline-flex items-center gap-3 px-10 py-5 bg-primary text-primary-foreground font-display font-bold text-xl rounded-xl hover:opacity-90 transition-all glow-box-strong"
+          className="inline-flex items-center gap-3 px-10 py-5 bg-white text-primary font-bold text-xl rounded-xl hover:bg-white/90 transition-all shadow-lg"
         >
           Quero meu Nível IA agora
         </a>
 
-        <p className="mt-5 text-sm text-muted-foreground">
+        <p className="mt-5 text-sm text-white/50">
           🔒 Pagamento seguro • Acesso imediato • Garantia de 7 dias
         </p>
       </div>

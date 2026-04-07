@@ -1,17 +1,23 @@
-import { X, Check } from "lucide-react";
+import { FileText, RefreshCw, BarChart3, X, Check } from "lucide-react";
 
 const comparisons = [
   {
-    common: "Usa o ChatGPT só para pesquisas genéricas",
-    nivelIA: "Automatiza tarefas repetitivas e ganha horas por semana",
+    icon: FileText,
+    task: "Montar uma proposta comercial",
+    common: "3–4 horas no Google Docs, escrevendo tudo do zero",
+    nivelIA: "15 minutos com IA gerando, o profissional só revisa",
   },
   {
-    common: "Copia e cola prompts da internet sem estratégia",
-    nivelIA: "Cria prompts avançados que entregam resultados reais",
+    icon: RefreshCw,
+    task: "Atualizar o CRM e fazer follow-up",
+    common: "Processo manual, esquecido 40% das vezes",
+    nivelIA: "Automação que roda sozinha, zero esquecimento",
   },
   {
-    common: "Não sabe quais ferramentas existem além do ChatGPT",
-    nivelIA: "Domina 5+ ferramentas e sabe quando usar cada uma",
+    icon: BarChart3,
+    task: "Gerar relatório semanal",
+    common: "1 dia compilando dados em planilha",
+    nivelIA: "20 minutos com IA puxando e estruturando os dados",
   },
 ];
 
@@ -19,36 +25,39 @@ const ProblemSection = () => {
   return (
     <section className="section-padding">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-display text-3xl md:text-5xl font-bold text-center mb-6">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 tracking-tight">
           90% dos profissionais usam IA{" "}
-          <span className="text-gradient">do jeito errado.</span>
+          <span className="text-primary">do jeito errado.</span>
         </h2>
         <p className="text-muted-foreground text-center text-lg max-w-2xl mx-auto mb-16">
-          Eles acham que "saber usar o ChatGPT" é suficiente. Enquanto isso, uma minoria está saindo na frente — e levando as promoções.
+          A maioria usa apenas o ChatGPT para pesquisas simples, sem extrair valor real no trabalho. Enquanto isso, uma minoria está saindo na frente.
         </p>
 
         <div className="grid gap-6 md:gap-8">
           {comparisons.map((item, i) => (
-            <div
-              key={i}
-              className="grid md:grid-cols-2 gap-4"
-            >
-              <div className="flex items-start gap-4 p-6 rounded-xl bg-secondary border border-border">
-                <div className="shrink-0 w-8 h-8 rounded-full bg-destructive/20 flex items-center justify-center mt-0.5">
-                  <X className="w-4 h-4 text-destructive" />
-                </div>
-                <div>
-                  <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Profissional comum</span>
-                  <p className="text-foreground mt-1">{item.common}</p>
-                </div>
+            <div key={i} className="rounded-xl border border-border overflow-hidden">
+              <div className="p-4 border-b border-border flex items-center gap-3" style={{ backgroundColor: 'hsl(var(--section-alt))' }}>
+                <item.icon className="w-5 h-5 text-primary" />
+                <span className="font-semibold text-foreground">{item.task}</span>
               </div>
-              <div className="flex items-start gap-4 p-6 rounded-xl bg-secondary border border-glow gradient-border">
-                <div className="shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
-                  <Check className="w-4 h-4 text-primary" />
+              <div className="grid md:grid-cols-2">
+                <div className="flex items-start gap-3 p-5 border-b md:border-b-0 md:border-r border-border">
+                  <div className="shrink-0 w-7 h-7 rounded-full bg-destructive/10 flex items-center justify-center mt-0.5">
+                    <X className="w-3.5 h-3.5 text-destructive" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Profissional comum</span>
+                    <p className="text-foreground mt-1 text-sm">{item.common}</p>
+                  </div>
                 </div>
-                <div>
-                  <span className="text-xs font-medium text-primary uppercase tracking-wider">Profissional Nível IA</span>
-                  <p className="text-foreground mt-1">{item.nivelIA}</p>
+                <div className="flex items-start gap-3 p-5">
+                  <div className="shrink-0 w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
+                    <Check className="w-3.5 h-3.5 text-primary" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-medium text-primary uppercase tracking-wider">Profissional Nível IA</span>
+                    <p className="text-foreground mt-1 text-sm">{item.nivelIA}</p>
+                  </div>
                 </div>
               </div>
             </div>
