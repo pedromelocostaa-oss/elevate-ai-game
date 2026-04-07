@@ -19,7 +19,7 @@ const testimonials = [
   {
     initials: "LM", name: "Lucas Mendes", role: "Executivo de Contas", company: "Vendex",
     color: "bg-orange-100 text-orange-700",
-    text: "Eu usava ChatGPT todo dia e achei que já sabia o suficiente. Estava muito errado. Descobri ferramentas e formas de usar que nunca imaginei. Minha produtividade mudou de patamar depois do Nível IA.",
+    text: "Eu usava ChatGPT todo dia e achei que já sabia o suficiente. Estava muito errado. Descobri ferramentas e formas de usar que nunca imaginei. Minha produtividade mudou de patamar depois do CLT do Futuro.",
   },
   {
     initials: "PT", name: "Patricia Torres", role: "Advogada", company: "Jurídico & Co",
