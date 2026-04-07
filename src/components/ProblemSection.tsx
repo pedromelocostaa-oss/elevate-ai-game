@@ -15,9 +15,9 @@ const comparisons = [
   },
   {
     icon: BarChart3,
-    task: "Gerar relatório semanal",
-    common: "1 dia compilando dados em planilha",
-    nivelIA: "20 minutos com IA puxando e estruturando os dados",
+    task: "Reportar dados e criar soluções internas",
+    common: "Planilhas manuais e meses esperando o time de TI desenvolver uma ferramenta",
+    nivelIA: "Cria dashboards, aplicativos e sites internos sozinho, sem contratar desenvolvedores",
   },
 ];
 
