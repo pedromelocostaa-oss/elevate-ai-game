@@ -1,13 +1,10 @@
-import { Zap, ClipboardList, Sparkles, Send } from "lucide-react";
+import { ClipboardList, Sparkles, Send } from "lucide-react";
 
 const steps = [
   { num: 1, icon: ClipboardList, title: "Responda", label: "Preencha seu perfil: área, cargo, setor e como é o seu dia a dia" },
   { num: 2, icon: Sparkles, title: "Analise", label: "Nossa IA lê sua rotina real e identifica onde você está perdendo tempo" },
   { num: 3, icon: Send, title: "Receba", label: "Um plano de ação personalizado com exatamente o que aplicar primeiro" },
 ];
-
-const areaChips = ["Vendas", "Marketing", "Jurídico", "RH", "Financeiro", "Operações", "Customer Success", "Produto/Tech"];
-const cargoChips = ["Analista", "Coordenador", "Gerente", "Diretor", "VP / C-Level"];
 
 const DiagnosisSection = () => {
   return (
@@ -28,7 +25,7 @@ const DiagnosisSection = () => {
         </div>
 
         {/* Steps */}
-        <div className="grid md:grid-cols-3 gap-6 mb-14">
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
           {steps.map((s) => (
             <div key={s.num} className="flex flex-col items-center text-center p-6 rounded-xl bg-card border border-border">
               <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center mb-4 text-lg font-bold">
@@ -39,60 +36,6 @@ const DiagnosisSection = () => {
               <p className="text-muted-foreground text-sm leading-relaxed">{s.label}</p>
             </div>
           ))}
-        </div>
-
-        {/* Form preview mockup */}
-        <div className="rounded-2xl border border-border bg-card shadow-sm overflow-hidden mb-8">
-          {/* Mockup header */}
-          <div className="bg-primary px-6 py-4 flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center">
-              <Zap className="w-4 h-4 text-white" />
-            </div>
-            <div>
-              <p className="text-xs font-semibold text-white/70 uppercase tracking-wide">Diagnóstico IA Personalizado</p>
-              <p className="text-white font-bold text-sm">Conte sobre o seu trabalho</p>
-            </div>
-            <div className="ml-auto flex gap-1.5">
-              <span className="px-2.5 py-1 bg-white/10 text-white/80 text-xs rounded-full">~5 minutos</span>
-              <span className="px-2.5 py-1 bg-white/10 text-white/80 text-xs rounded-full">Gerado por IA</span>
-            </div>
-          </div>
-
-          {/* Mockup body */}
-          <div className="px-6 py-6 space-y-6 pointer-events-none select-none">
-            <div>
-              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-3">Área de atuação</p>
-              <div className="flex flex-wrap gap-2">
-                {areaChips.map((chip) => (
-                  <span key={chip} className={`px-3 py-1.5 rounded-full text-sm border ${chip === "Marketing" ? "bg-primary text-primary-foreground border-primary font-semibold" : "border-border text-muted-foreground"}`}>
-                    {chip}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-3">Cargo</p>
-              <div className="flex flex-wrap gap-2">
-                {cargoChips.map((chip) => (
-                  <span key={chip} className={`px-3 py-1.5 rounded-full text-sm border ${chip === "Gerente" ? "bg-primary text-primary-foreground border-primary font-semibold" : "border-border text-muted-foreground"}`}>
-                    {chip}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">Descreva seu dia a dia</p>
-              <div className="w-full rounded-lg border border-border bg-muted/40 px-4 py-3 text-sm text-muted-foreground italic">
-                Passo boa parte do tempo criando briefings, revisando campanhas e respondendo demandas no Slack…
-              </div>
-            </div>
-
-            <button className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-primary/80 text-primary-foreground font-bold text-sm cursor-default">
-              <Zap className="w-4 h-4" /> Gerar meu diagnóstico
-            </button>
-          </div>
         </div>
 
         {/* Bottom callout */}
