@@ -7,6 +7,7 @@ import ForWhoSection from "@/components/ForWhoSection";
 import IntermediateCTASection from "@/components/IntermediateCTASection";
 import LearningSection from "@/components/LearningSection";
 import DiagnosisSection from "@/components/DiagnosisSection";
+import CommunitySection from "@/components/CommunitySection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import UrgencySection from "@/components/UrgencySection";
 import GuaranteeSection from "@/components/GuaranteeSection";
@@ -44,7 +45,10 @@ const Index = () => {
       {/* 8 — Diferencial: diagnóstico personalizado */}
       <DiagnosisSection />
 
-      {/* 9 — Prova social */}
+      {/* 9 — Comunidade: cases reais de alunos */}
+      <CommunitySection />
+
+      {/* 10 — Prova social */}
       <TestimonialsSection />
 
       {/* 10 — FOMO: urgência após prova social */}
