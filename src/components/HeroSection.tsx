@@ -7,6 +7,7 @@ import cursorLogo from "@/assets/logos/cursor.svg";
 import n8nLogo from "@/assets/logos/n8n.svg";
 import perplexityLogo from "@/assets/logos/perplexity.svg";
 import notebooklmLogo from "@/assets/logos/notebooklm.svg";
+import { HOTMART_URL, PRICE } from "@/lib/constants";
 
 const toolLogos = [
   { name: "ChatGPT", logo: chatgptLogo },
@@ -20,44 +21,51 @@ const toolLogos = [
   { name: "NotebookLM", logo: notebooklmLogo },
 ];
 
-// Duplicate for seamless loop
 const marqueeItems = [...toolLogos, ...toolLogos];
 
 const HeroSection = () => {
   return (
     <>
-      <section className="section-padding min-h-[85vh] flex items-center justify-center">
+      <section className="section-padding min-h-[88vh] flex items-center justify-center">
         <div className="max-w-3xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-8 tracking-wide uppercase">
+            Para profissionais empregados
+          </div>
+
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-foreground mb-6">
-            O profissional que dominar a IA será{" "}
-            <span className="text-primary">promovido.</span>
+            Você usa IA todo dia.
             <br />
-            O que ignorar será{" "}
-            <span className="text-muted-foreground">substituído.</span>
+            Seu colega também.{" "}
+            <span className="text-primary">Só um de vocês vai ser promovido.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            Virada Profissional com IA é a plataforma que transforma profissionais comuns em profissionais indispensáveis — usando as ferramentas de IA que já existem, mas que quase ninguém sabe usar de verdade.
+            A maioria usa ChatGPT para pesquisas básicas. Os profissionais que estão
+            sendo promovidos usam IA para entregar em 15 minutos o que leva 4 horas,
+            automatizar o que esqueceriam e resolver problemas sem depender de TI.
+            Virada Profissional te mostra exatamente como.
           </p>
 
           <a
-            href="#checkout"
+            href={HOTMART_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-bold text-lg rounded-xl hover:opacity-90 transition-all shadow-lg shadow-primary/20"
           >
-            Quero minha Virada Profissional — R$97
+            Quero me tornar indispensável →
           </a>
 
           <p className="mt-4 text-sm text-muted-foreground">
-            🔒 Acesso imediato após a compra • Garantia de 7 dias
+            🔒 Acesso imediato após a compra · Garantia de 7 dias · {PRICE} uma única vez
           </p>
         </div>
       </section>
 
-      {/* Tools marquee */}
       <div className="py-8 overflow-hidden" style={{ backgroundColor: 'hsl(var(--section-alt))' }}>
-        <p className="text-sm font-medium text-muted-foreground mb-6 text-center">Ferramentas que você vai dominar:</p>
+        <p className="text-xs font-semibold text-muted-foreground mb-6 text-center uppercase tracking-widest">
+          Ferramentas que você vai dominar
+        </p>
         <div className="relative">
-          {/* Fade edges */}
           <div className="absolute left-0 top-0 bottom-0 w-16 z-10" style={{ background: 'linear-gradient(to right, hsl(var(--section-alt)), transparent)' }} />
           <div className="absolute right-0 top-0 bottom-0 w-16 z-10" style={{ background: 'linear-gradient(to left, hsl(var(--section-alt)), transparent)' }} />
 
