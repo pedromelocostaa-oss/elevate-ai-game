@@ -2,8 +2,8 @@ import { Target, MessageSquare, Bot } from "lucide-react";
 
 const steps = [
   { num: 1, icon: Target, label: "Você informa sua área de atuação e seu setor" },
-  { num: 2, icon: MessageSquare, label: "Descreve como é o seu dia a dia no trabalho — suas tarefas, ferramentas e desafios" },
-  { num: 3, icon: Bot, label: "A IA analisa tudo e entrega um diagnóstico com ações concretas para aplicar imediatamente" },
+  { num: 2, icon: MessageSquare, label: "Descreve como é o seu dia a dia — tarefas, ferramentas, gargalos e desafios reais" },
+  { num: 3, icon: Bot, label: "A IA analisa tudo e entrega um diagnóstico com ações concretas para aplicar na semana seguinte" },
 ];
 
 const DiagnosisSection = () => {
@@ -11,11 +11,16 @@ const DiagnosisSection = () => {
     <section className="py-20 md:py-24 px-4 md:px-8 border-y border-primary/20" style={{ backgroundColor: 'hsl(var(--section-highlight))' }}>
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-6 tracking-wide uppercase">
+            Incluso no seu acesso
+          </div>
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
-            Seu plano personalizado de IA. Para a sua área. Para o seu dia a dia.
+            Um plano de IA feito para a sua rotina. Não para uma persona genérica.
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Nenhum curso genérico faz isso. Enquanto outros entregam o mesmo conteúdo para todo mundo, a Virada Profissional com IA analisa a sua rotina e te diz exatamente onde e como aplicar IA no seu trabalho.
+            Todo mundo recebe o mesmo conteúdo. Só você recebe um diagnóstico
+            que analisa a sua área, o seu cargo e os seus desafios específicos —
+            e te diz exatamente onde aplicar IA primeiro.
           </p>
         </div>
 
@@ -33,7 +38,8 @@ const DiagnosisSection = () => {
 
         <div className="p-6 md:p-8 rounded-xl border border-primary/20 bg-card text-center">
           <p className="text-foreground leading-relaxed">
-            <span className="font-bold text-primary">O diagnóstico é feito para você</span> — não para uma persona fictícia. É como ter um consultor de IA olhando para a sua rotina específica.
+            <span className="font-bold text-primary">É como ter um consultor de IA olhando para a sua rotina</span>{" "}
+            — sem reunião, sem agenda, sem cobrar por hora. Você preenche em 5 minutos e sai com um plano de ação.
           </p>
         </div>
       </div>

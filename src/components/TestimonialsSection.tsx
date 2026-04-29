@@ -37,9 +37,12 @@ const TestimonialsSection = () => {
   return (
     <section className="section-padding" style={{ backgroundColor: 'hsl(var(--section-alt))' }}>
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-center tracking-tight mb-12">
-          O que quem já acessou está dizendo.
+        <h2 className="text-3xl md:text-4xl font-extrabold text-center tracking-tight mb-4">
+          Quem já aplicou, aprovou.
         </h2>
+        <p className="text-muted-foreground text-center text-lg max-w-xl mx-auto mb-12">
+          Profissionais reais, de áreas diferentes, com o mesmo resultado: começaram a aplicar na primeira semana.
+        </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
