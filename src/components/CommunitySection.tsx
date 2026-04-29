@@ -56,25 +56,29 @@ const CommunitySection = () => {
         </div>
 
         {/* Filtros — visual only, representa a UI real do produto */}
-        <div className="mb-8 p-5 rounded-xl border border-border bg-card">
-          <div className="flex items-center gap-2 mb-4">
-            <SlidersHorizontal className="w-4 h-4 text-muted-foreground" />
-            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Filtros disponíveis dentro da plataforma</span>
+        <div className="mb-8 p-4 sm:p-5 rounded-xl border border-border bg-card">
+          <div className="flex items-start sm:items-center gap-2 mb-4">
+            <SlidersHorizontal className="w-4 h-4 text-muted-foreground shrink-0 mt-0.5 sm:mt-0" />
+            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider leading-snug">Filtros disponíveis dentro da plataforma</span>
           </div>
-          <div className="flex flex-col gap-3">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="text-xs text-muted-foreground font-medium w-16 shrink-0">Ferramenta</span>
-              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-primary text-primary-foreground">Todos</span>
-              {filters.tools.map((t) => (
-                <span key={t} className="px-3 py-1 rounded-full text-xs font-medium bg-muted text-muted-foreground border border-border">{t}</span>
-              ))}
+          <div className="flex flex-col gap-4 sm:gap-3">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-2">
+              <span className="text-xs text-muted-foreground font-medium sm:w-16 sm:shrink-0">Ferramenta</span>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-primary text-primary-foreground">Todos</span>
+                {filters.tools.map((t) => (
+                  <span key={t} className="px-3 py-1 rounded-full text-xs font-medium bg-muted text-muted-foreground border border-border">{t}</span>
+                ))}
+              </div>
             </div>
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="text-xs text-muted-foreground font-medium w-16 shrink-0">Área</span>
-              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-primary text-primary-foreground">Todos</span>
-              {filters.areas.map((a) => (
-                <span key={a} className="px-3 py-1 rounded-full text-xs font-medium bg-muted text-muted-foreground border border-border">{a}</span>
-              ))}
+            <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-2">
+              <span className="text-xs text-muted-foreground font-medium sm:w-16 sm:shrink-0">Área</span>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-primary text-primary-foreground">Todos</span>
+                {filters.areas.map((a) => (
+                  <span key={a} className="px-3 py-1 rounded-full text-xs font-medium bg-muted text-muted-foreground border border-border">{a}</span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
