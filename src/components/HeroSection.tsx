@@ -26,20 +26,20 @@ const marqueeItems = [...toolLogos, ...toolLogos];
 const HeroSection = () => {
   return (
     <>
-      <section className="section-padding min-h-[88vh] flex items-center justify-center">
+      <section className="section-padding min-h-[72vh] sm:min-h-[88vh] flex items-center justify-center">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-8 tracking-wide uppercase">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-5 sm:mb-8 tracking-wide uppercase">
             Para profissionais empregados
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-foreground mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-foreground mb-5 sm:mb-6">
             Você usa IA todo dia.
             <br />
             Seu colega também.{" "}
             <span className="text-primary">Só um de vocês vai ser promovido.</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
             A maioria usa ChatGPT para pesquisas básicas. Os profissionais que estão
             sendo promovidos usam IA para entregar em 15 minutos o que leva 4 horas,
             automatizar o que esqueceriam e resolver problemas sem depender de TI.
@@ -50,13 +50,13 @@ const HeroSection = () => {
             href={HOTMART_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-bold text-lg rounded-xl hover:opacity-90 transition-all shadow-lg shadow-primary/20"
+            className="flex sm:inline-flex justify-center items-center gap-3 w-full sm:w-auto px-8 py-4 bg-primary text-primary-foreground font-bold text-base sm:text-lg rounded-xl hover:opacity-90 transition-all shadow-lg shadow-primary/20"
           >
             Quero me tornar indispensável →
           </a>
 
-          <p className="mt-4 text-sm text-muted-foreground">
-            🔒 Acesso imediato após a compra · Garantia de 7 dias · {PRICE} uma única vez
+          <p className="mt-4 text-xs sm:text-sm text-muted-foreground">
+            🔒 Acesso imediato · Garantia de 7 dias · {PRICE} uma única vez
           </p>
         </div>
       </section>

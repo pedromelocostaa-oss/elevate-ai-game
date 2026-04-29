@@ -14,10 +14,11 @@ import GuaranteeSection from "@/components/GuaranteeSection";
 import FAQSection from "@/components/FAQSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import FooterSection from "@/components/FooterSection";
+import MobileCTA from "@/components/MobileCTA";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen mobile-pb">
       {/* Navegação fixa */}
       <NavHeader />
 
@@ -51,19 +52,22 @@ const Index = () => {
       {/* 10 — Prova social */}
       <TestimonialsSection />
 
-      {/* 10 — FOMO: urgência após prova social */}
+      {/* 11 — FOMO: urgência após prova social */}
       <UrgencySection />
 
-      {/* 11 — Remoção de risco: garantia + CTA */}
+      {/* 12 — Remoção de risco: garantia + CTA */}
       <GuaranteeSection />
 
-      {/* 12 — Objeções: FAQ */}
+      {/* 13 — Objeções: FAQ */}
       <FAQSection />
 
-      {/* 13 — CTA final */}
+      {/* 14 — CTA final */}
       <FinalCTASection />
 
       <FooterSection />
+
+      {/* Barra de compra fixa no rodapé — só mobile */}
+      <MobileCTA />
     </div>
   );
 };

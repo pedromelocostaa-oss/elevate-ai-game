@@ -70,6 +70,11 @@
 
 @layer utilities {
   .section-padding {
-    @apply px-4 py-20 md:px-8 md:py-24 lg:py-28;
+    @apply px-4 py-14 md:px-8 md:py-24 lg:py-28;
+  }
+
+  /* Espaço extra no rodapé para não sobrepor a barra CTA mobile */
+  .mobile-pb {
+    @apply pb-24 md:pb-0;
   }
 }

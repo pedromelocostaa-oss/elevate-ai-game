@@ -16,7 +16,7 @@ const FinalCTASection = () => {
           href={HOTMART_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 px-10 py-5 bg-white text-primary font-bold text-xl rounded-xl hover:bg-white/90 transition-all shadow-lg"
+          className="flex sm:inline-flex justify-center items-center gap-3 w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-5 bg-white text-primary font-bold text-base sm:text-xl rounded-xl hover:bg-white/90 transition-all shadow-lg"
         >
           Quero ser o indispensável da minha equipe →
         </a>

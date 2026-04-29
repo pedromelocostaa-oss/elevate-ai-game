@@ -19,9 +19,10 @@ const NavHeader = () => {
           href={HOTMART_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground font-bold text-sm rounded-lg hover:opacity-90 transition-opacity"
+          className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-primary text-primary-foreground font-bold text-sm rounded-lg hover:opacity-90 transition-opacity whitespace-nowrap"
         >
-          Garantir acesso — {PRICE}
+          <span className="sm:hidden">{PRICE}</span>
+          <span className="hidden sm:inline">Garantir acesso — {PRICE}</span>
         </a>
       </div>
     </header>

@@ -21,7 +21,7 @@ const GuaranteeSection = () => {
           href={HOTMART_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-bold text-lg rounded-xl hover:opacity-90 transition-all shadow-lg shadow-primary/20"
+          className="flex sm:inline-flex justify-center items-center gap-3 w-full sm:w-auto px-8 py-4 bg-primary text-primary-foreground font-bold text-base sm:text-lg rounded-xl hover:opacity-90 transition-all shadow-lg shadow-primary/20"
         >
           Quero me tornar indispensável — {PRICE} →
         </a>

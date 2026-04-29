@@ -33,6 +33,26 @@ const testimonials = [
   },
 ];
 
+const TestimonialCard = ({ t }: { t: typeof testimonials[0] }) => (
+  <div className="p-6 rounded-xl border border-border bg-card shadow-sm h-full flex flex-col">
+    <div className="flex items-center gap-3 mb-4">
+      <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shrink-0 ${t.color}`}>
+        {t.initials}
+      </div>
+      <div>
+        <p className="font-semibold text-sm text-foreground">{t.name}</p>
+        <p className="text-xs text-muted-foreground">{t.role} · {t.company}</p>
+      </div>
+    </div>
+    <div className="flex gap-0.5 mb-3">
+      {[...Array(5)].map((_, j) => (
+        <Star key={j} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+      ))}
+    </div>
+    <p className="text-muted-foreground text-sm leading-relaxed">"{t.text}"</p>
+  </div>
+);
+
 const TestimonialsSection = () => {
   return (
     <section className="section-padding" style={{ backgroundColor: 'hsl(var(--section-alt))' }}>
@@ -40,29 +60,28 @@ const TestimonialsSection = () => {
         <h2 className="text-3xl md:text-4xl font-extrabold text-center tracking-tight mb-4">
           Quem já aplicou, aprovou.
         </h2>
-        <p className="text-muted-foreground text-center text-lg max-w-xl mx-auto mb-12">
+        <p className="text-muted-foreground text-center text-lg max-w-xl mx-auto mb-10">
           Profissionais reais, de áreas diferentes, com o mesmo resultado: começaram a aplicar na primeira semana.
         </p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Mobile: carrossel horizontal com snap */}
+        <div className="md:hidden -mx-4 px-4 flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 [&::-webkit-scrollbar]:hidden">
           {testimonials.map((t, i) => (
-            <div key={i} className="p-6 rounded-xl border border-border bg-card shadow-sm">
-              <div className="flex items-center gap-3 mb-4">
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${t.color}`}>
-                  {t.initials}
-                </div>
-                <div>
-                  <p className="font-semibold text-sm text-foreground">{t.name}</p>
-                  <p className="text-xs text-muted-foreground">{t.role} · {t.company}</p>
-                </div>
-              </div>
-              <div className="flex gap-0.5 mb-3">
-                {[...Array(5)].map((_, j) => (
-                  <Star key={j} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-muted-foreground text-sm leading-relaxed">"{t.text}"</p>
+            <div key={i} className="snap-start shrink-0 w-[82vw]">
+              <TestimonialCard t={t} />
             </div>
+          ))}
+        </div>
+
+        {/* Indicador de deslize — só mobile */}
+        <p className="md:hidden text-center text-xs text-muted-foreground mt-3">
+          ← deslize para ver mais →
+        </p>
+
+        {/* Desktop: grid */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {testimonials.map((t, i) => (
+            <TestimonialCard key={i} t={t} />
           ))}
         </div>
       </div>
